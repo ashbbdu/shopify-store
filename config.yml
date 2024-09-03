@@ -1,0 +1,8 @@
+development:
+  password: shptka_96689ce19a018dbecdefdf60d90d59ca
+  theme_id: "132584407092"
+  store: practicestorefortest.myshopify.com
+  ignore_files:
+    - config/settings_data.json
+    - templates/*.json
+    - config/settings_data.json

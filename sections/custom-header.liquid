@@ -1,0 +1,72 @@
+<style>
+ .header-style {
+   color : red;
+ }
+  
+</style>
+<div class="header-style">{{ section.settings.text }}</div>
+<img src={{ section.settings.image-picker | image_url}} height="200" width="200" />
+{% if section.settings.layout_style == 'grid' %}
+  <!-- HTML and CSS for Grid Layout -->
+  <div class="grid-layout">
+    <!-- Your grid content here -->
+    adsflasjf
+  </div>
+{% elsif section.settings.layout_style == 'list' %}
+  <!-- HTML and CSS for List Layout -->
+  asldifajkf
+  <div class="list-layout">
+    <!-- Your list content here -->
+    aslkdjfal
+  </div>
+{% elsif section.settings.layout_style == 'masonry' %}
+  <!-- HTML and CSS for Masonry Layout -->
+  <div class="masonry-layout">
+    <!-- Your masonry content here -->
+    aksdfjalk
+  </div>
+{% endif %}
+{% schema %}
+  {
+    "name": "Custom Header",
+    "settings": [
+       {
+          "type": "text",
+          "id": "text",
+          "default": "Welcome to our store",
+          "label": "test label"
+        },
+       {
+          "type": "image_picker",
+          "id": "image-picker",
+          "label": "test label"
+        },
+      {
+      "type": "radio",
+      "id": "layout_style",
+      "label": "Choose Layout Style",
+      "default": "grid",
+      "options": [
+        {
+          "value": "grid",
+          "label": "Grid Layout"
+        },
+        {
+          "value": "list",
+          "label": "List Layout"
+        },
+        {
+          "value": "masonry",
+          "label": "Masonry Layout"
+        }
+      ]
+    }
+    ],
+    "presets": [
+    {
+      "name": "custom-header",
+
+    }
+  ]
+  }
+{% endschema %}
